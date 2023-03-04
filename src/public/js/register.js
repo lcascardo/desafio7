@@ -8,7 +8,7 @@ form.addEventListener('submit' , (evt)=>{
     data.forEach((value,key)=>obj[key]=value);
     fetch('/api/session/register',{
         method:'POST',
-        body:JSON.stringify(data),
+        body:JSON.stringify(obj),
         headers:{
             'Content-type':'application/json'
         }
